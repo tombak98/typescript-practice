@@ -1,6 +1,6 @@
 module.exports = {
   mode: "development",
-  entry: ["./src/index.ts"],
+  entry: ["./src/index.tsx"],
   output: {
     path: __dirname + "/public",
     filename: "bundle.js",
