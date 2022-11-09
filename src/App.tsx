@@ -1,5 +1,9 @@
 import * as React from 'react'
-import axios from 'axios'
+
+// forces name as a type string, can never be changed from a string, will give an error
+let name: string;
+// likewise with this as well
+let age: number;
 
 const App = () => {
     return (
