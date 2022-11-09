@@ -1,15 +1,19 @@
-import * as React from 'react'
+import React from 'react'
+import TestComponent from './components/TestComponent'
 
-// forces name as a type string, can never be changed from a string, will give an error
-let name: string;
-// likewise with this as well
-let age: number;
+// React Function Component type
+const App:React.FC = () => {
 
-const App = () => {
+    // here I am setting the useState to be type string with the syntax shown. Union also works. Array also works
+    const [todo, setTodo] = React.useState<string | number>("")
+ 
     return (
+        <>
         <div>
             Hello World, this is in the tsx only. Okay this is a good starting point for now. Until tomorrow!
         </div>
+        <TestComponent/>
+        </>
     )
 }
 
