@@ -33418,10 +33418,16 @@ var App = function () {
     // here I am setting the useState to be type string with the syntax shown. Union | also works inside the brackets. 
     // Array also works
     var _a = react__WEBPACK_IMPORTED_MODULE_0___default().useState(""), todo = _a[0], setTodo = _a[1];
+    // now, lets create a separate state that holds an array of Todos that we created in model.ts
+    var _b = react__WEBPACK_IMPORTED_MODULE_0___default().useState([]), todos = _b[0], setTodos = _b[1];
+    // so, even for basic functions that take an event, we need to give it a type. Look this up later
+    var handleAdd = function (event) {
+        event.preventDefault();
+    };
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Hello World, this is in the tsx only. Okay this is a good starting point for now. Until tomorrow!"),
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_TestComponent__WEBPACK_IMPORTED_MODULE_2__["default"], null),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_InputField__WEBPACK_IMPORTED_MODULE_1__["default"], { todo: todo, setTodo: setTodo })));
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_InputField__WEBPACK_IMPORTED_MODULE_1__["default"], { todo: todo, setTodo: setTodo, handleAdd: handleAdd })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 
@@ -33444,7 +33450,7 @@ __webpack_require__.r(__webpack_exports__);
 // so here, we see that we set the type of that object that is input into as a Props interface
 // you can ALSO do. InputField:React.FC<Props> = ({todo, setTodo})
 var InputField = function (_a) {
-    var todo = _a.todo, setTodo = _a.setTodo;
+    var todo = _a.todo, setTodo = _a.setTodo, handleAdd = _a.handleAdd;
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Hello"));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InputField);
