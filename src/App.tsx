@@ -22,6 +22,7 @@ const App:React.FC = () => {
         <div>
             Hello World, this is in the tsx only. Okay this is a good starting point for now. Until tomorrow!
         </div>
+        {/* This proves that you can also just use straight JS components too */}
         <TestComponent/>
         {/* When we give something attributes or props, we need to make sure in the component itself that it is defined */}
         <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
