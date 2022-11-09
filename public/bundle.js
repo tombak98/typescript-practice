@@ -33408,18 +33408,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_TestComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/TestComponent */ "./src/components/TestComponent.js");
+/* harmony import */ var _components_InputField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/InputField */ "./src/components/InputField.tsx");
+/* harmony import */ var _components_TestComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/TestComponent */ "./src/components/TestComponent.js");
+
 
 
 // React Function Component type
 var App = function () {
-    // here I am setting the useState to be type string with the syntax shown. Union also works. Array also works
+    // here I am setting the useState to be type string with the syntax shown. Union | also works inside the brackets. 
+    // Array also works
     var _a = react__WEBPACK_IMPORTED_MODULE_0___default().useState(""), todo = _a[0], setTodo = _a[1];
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
         react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Hello World, this is in the tsx only. Okay this is a good starting point for now. Until tomorrow!"),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_TestComponent__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_TestComponent__WEBPACK_IMPORTED_MODULE_2__["default"], null),
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_InputField__WEBPACK_IMPORTED_MODULE_1__["default"], { todo: todo, setTodo: setTodo })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+
+/***/ }),
+
+/***/ "./src/components/InputField.tsx":
+/*!***************************************!*\
+  !*** ./src/components/InputField.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+// so here, we see that we set the type of that object that is input into as a Props interface
+// you can ALSO do. InputField:React.FC<Props> = ({todo, setTodo})
+var InputField = function (_a) {
+    var todo = _a.todo, setTodo = _a.setTodo;
+    return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Hello"));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InputField);
 
 
 /***/ })
